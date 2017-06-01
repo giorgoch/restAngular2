@@ -1,3 +1,10 @@
-<ol>
-    <li *ngFor="let item of exampleName">{{item.name}} ,{{item.lname}} ,{{item.adress}} ,{{item.postcode}} ,{{item.city}} ,{{item.tel}}</li>
-</ol>
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor=" let item of exampleName">
+                <span class="badge">{{item.name}} {{item.lname}} {{item.tel}} {{item.adress}} {{item.postcode}} {{item.city}}</span>
+                <button class="btn btn-danger"></button>
+            </li>
+        </ul>
+    </div>
+</div>
