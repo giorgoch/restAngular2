@@ -1,17 +1,20 @@
 import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
+import { PersonService } from '../Services/person.service';
+import { Person } from './../model/person.model';
 
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
   styleUrls: ['./add.component.css'],
-  encapsulation: ViewEncapsulation.null,
-  changeDetection: ChangeDetectionStrategy.null
+
 })
 export class AddComponent implements OnInit {
+  exampleName: Person = [];
 
-  constructor() { }
+  constructor(private personService: PersonService) { }
 
   ngOnInit() {
+    this.exampleName = this.personService.getExampleNames();
   }
 
 }
