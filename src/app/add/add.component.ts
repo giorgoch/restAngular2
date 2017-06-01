@@ -9,12 +9,12 @@ import { Person } from './../model/person.model';
 
 })
 export class AddComponent implements OnInit {
-  exampleName: Person = [];
+
 
   constructor(private personService: PersonService) { }
 
   ngOnInit() {
-    this.exampleName = this.personService.getExampleNames();
+    this.personService.getExampleNames();
   }
 
 }
