@@ -8,9 +8,11 @@ import { PersonService } from '../Services/person.service';
 })
 export class EditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private personService: PersonService) { }
 
   ngOnInit() {
+
+    this.personService.getExampleNames();
   }
 
 }
